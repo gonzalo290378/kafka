@@ -1,0 +1,14 @@
+1) TENER EN CUENTA QUE LA INSTALACION DE KAFKA SE HIZO EN EL SIGUIENTE DIRECTORIO: C:\Users\gonza\Kafka\bin , POR LO
+TANTO LAS VARIABLES DE ENTORNO ESTAN CONFIGURADAS ALLI
+
+2) LEVANTAMOS ZOOKEEPER EN UNA TERMINAL DE UBUNTU
+gonzalo290378@Gonza:~$ zookeeper-server-start.sh ~/kafka_2.13-3.8.0/config/zookeeper.properties
+
+3) LEVANTAMOS KAFKA EN OTRA TERMINAL DISTINTA DE UBUNTU
+gonzalo290378@Gonza:~$ kafka-server-start.sh ~/kafka_2.13-3.8.0/config/server.properties
+
+4) TEST SI LEVANTA BIEN KAFKA EN UNA TERCERA TERMINAL DE UBUNTU
+gonzalo290378@Gonza:~$ kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+5) TEST SI LEVANTA BIEN EN WINDOW EN UNA POWERSHELL
+PS C:\Users\gonza> kafka-topics.bat --bootstrap-server localhost:9092 --list

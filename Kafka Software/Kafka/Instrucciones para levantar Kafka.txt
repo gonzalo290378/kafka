@@ -1,0 +1,10 @@
+Primero ir a una termina de Ubuntu y ejecutar
+
+1) LEVANTAMOS ZOOKEEPER
+gonzalo290378@Gonza:~$ zookeeper-server-start.sh ~/kafka_2.13-3.8.0/config/zookeeper.properties
+
+2) LEVANTAMOS KAFKA
+gonzalo290378@Gonza:~$ kafka-server-start.sh ~/kafka_2.13-3.8.0/config/server.properties
+
+3) TEST SI LEVANTA BIEN KAFKA
+gonzalo290378@Gonza:~$ kafka-topics.sh --bootstrap-server localhost:9092 --list

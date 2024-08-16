@@ -1,0 +1,29 @@
+I was able to reproduce your issue and to solve it. I'll record some more instructions soon, but can you please confirm these work for you?
+
+
+
+First, stop Kafka and Zookeeper.
+
+
+
+Then, please run these commands on your end, on WSL2, one by one
+
+
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+and
+
+
+
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+
+This will ask for your password the first time.
+
+
+
+When the two commands have succeeded, relaunch Zookeeper and Kafka, and you should be able to connect from your Java programs, without a problem.
+
+
+
+Please confirm if it's all good for you, and I will include these commands in the course :)
